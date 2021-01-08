@@ -1,5 +1,4 @@
-exports.file = function(fileEntry, success, error){
-		var path = fileEntry.toURL();
+exports.file = function(path, success, error){
 		if (path){
 			cordova.exec(success, error, "md5chksum", "file", [path]);
 		}else{
